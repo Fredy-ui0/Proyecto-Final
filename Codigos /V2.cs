@@ -15,8 +15,7 @@ class Login
             Console.Write("Contraseña: ");
             string contrasena = Console.ReadLine();
 
-            if (usuario != null && contrasena != null &&
-                usuario == Usuario && contrasena == Contraseña)
+            if ( usuario == Usuario && contrasena == Contraseña)
             {
                 Console.WriteLine("Acceso concedido");
                 return true;
