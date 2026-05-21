@@ -245,7 +245,15 @@ class Tablero
 
                     Console.WriteLine("Movimiento realizado");
 
-                    turno = (turno == 1) ? 2 : 1;
+                    if (turno == 1)
+                    {
+                        turno = 2;
+                    }
+                    else
+                    {
+                        turno = 1;
+                    }
+
                     Console.WriteLine("Turno del Jugador " + turno);
 
                     break;
@@ -333,8 +341,19 @@ class Tablero
         }
         else if (columnaOrigen == columnaDestino)
         {
-            int inicio = Math.Min(filaOrigen, filaDestino) + 1;
-            int fin = Math.Max(filaOrigen, filaDestino);
+            int inicio;
+            int fin;
+
+            if (filaOrigen < filaDestino)
+            {
+                inicio = filaOrigen + 1;
+                fin = filaDestino;
+            }
+            else
+            {
+                inicio = filaDestino + 1;
+                fin = filaOrigen;
+            }
 
             for (int i = inicio; i < fin; i++)
             {
