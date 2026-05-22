@@ -180,9 +180,7 @@ class Tablero
                 break;
             }
 
-            Console.WriteLine();
-            Console.WriteLine("Presione una tecla para continuar...");
-            Console.ReadKey();
+            
         }
     }
 
@@ -370,8 +368,7 @@ class Tablero
     {
         if (filaOrigen == filaDestino)
         {
-            int inicio = Math.Min(columnaOrigen, columnaDestino) + 1;
-            int fin = Math.Max(columnaOrigen, columnaDestino);
+       
 
             for (int j = inicio; j < fin; j++)
             {
